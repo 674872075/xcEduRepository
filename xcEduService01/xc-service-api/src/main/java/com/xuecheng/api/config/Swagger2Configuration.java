@@ -10,7 +10,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-//
+
 @Configuration
 @EnableSwagger2
 public class Swagger2Configuration {
@@ -26,8 +26,8 @@ public class Swagger2Configuration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("学成网api文档")
-                .description("学成网api文档")
+                .title("IT在线api文档")
+                .description("IT在线api文档")
 //                .termsOfServiceUrl("/")
                 .version("1.0")
                 .build();

@@ -45,7 +45,6 @@ public class CmsPageController implements CmsPageControllerApi {
     @Override
     @PutMapping("/edit/{id}")
     public CmsPageResult edit(@PathVariable("id") String id,@RequestBody CmsPage cmsPage) {
-
         return pageService.update(id,cmsPage);
     }
 
@@ -53,5 +52,11 @@ public class CmsPageController implements CmsPageControllerApi {
     @DeleteMapping("/del/{id}")
     public ResponseResult delete(@PathVariable("id") String id) {
         return pageService.deleteById(id);
+    }
+
+    @Override
+    @PostMapping("/postPage/{pageId}")
+    public ResponseResult post(@PathVariable("pageId") String pageId) {
+        return pageService.post(pageId);
     }
 }

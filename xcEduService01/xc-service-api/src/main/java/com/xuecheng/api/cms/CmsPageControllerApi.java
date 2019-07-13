@@ -50,4 +50,8 @@ public interface CmsPageControllerApi {
     @ApiImplicitParam(name="id",value = "页面主键id"
             ,required=true,paramType="path",dataType="String")
     ResponseResult delete(String id);
+    
+    @ApiOperation("发布页面")
+    public ResponseResult post(String pageId);
+
 }

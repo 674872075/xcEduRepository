@@ -35,6 +35,7 @@
         <mysql-connector-java.version>5.1.40</mysql-connector-java.version>
         <elasticsearch.version>6.2.1</elasticsearch.version>
         <guava.version>24.0-jre</guava.version>
+        <pagehelper.version>1.2.5</pagehelper.version>
     </properties>
     <!--test-->
     <dependencyManagement>
@@ -59,7 +60,7 @@
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>1.2.4</version>
+                <version>${pagehelper.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>

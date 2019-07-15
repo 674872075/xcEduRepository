@@ -2,6 +2,7 @@ package com.xuecheng.manage_cms.web.controller;
 
 import com.xuecheng.framework.web.BaseController;
 import com.xuecheng.manage_cms.service.PageService;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ import java.io.OutputStream;
  * @Description
  */
 @Controller
+@Api(value = "页面预览",description = "页面预览")
 public class CmsPagePreviewController extends BaseController {
 
     @Autowired

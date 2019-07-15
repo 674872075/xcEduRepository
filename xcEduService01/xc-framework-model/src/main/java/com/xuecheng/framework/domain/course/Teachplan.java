@@ -14,6 +14,7 @@ import java.io.Serializable;
 @ToString
 @Entity
 @Table(name="teachplan")
+/*Hibernate对主键生成策略的扩展*/
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Teachplan implements Serializable {
     private static final long serialVersionUID = -916357110051689485L;

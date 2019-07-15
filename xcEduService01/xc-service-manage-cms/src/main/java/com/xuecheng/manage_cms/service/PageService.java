@@ -32,6 +32,7 @@ import org.springframework.data.mongodb.gridfs.GridFsResource;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.web.client.RestTemplate;
 
@@ -118,6 +119,7 @@ public class PageService {
         return queryResponseResult;
     }
 
+    @Transactional
     public CmsPageResult add(CmsPage cmsPage) {
 
         //校验页面是否存在 根据页面名称、站点Id、页面webpath查询
@@ -146,6 +148,7 @@ public class PageService {
         return new CmsPageResult(CommonCode.FAIL, null);
     }
 
+    @Transactional
     public CmsPageResult update(String id, CmsPage cmsPage) {
         //根据id查询页面信息
         CmsPageResult cmsPageResult = this.findById(id);
@@ -312,7 +315,8 @@ public class PageService {
         return new ResponseResult(CommonCode.SUCCESS);
     }
 
-    private CmsPage saveHtml(String pageId, String pageHtml) {
+    @Transactional
+    public CmsPage saveHtml(String pageId, String pageHtml) {
         //查询页面
         Optional<CmsPage> optional = cmsPageRepository.findById(pageId);
         if (!optional.isPresent()) {

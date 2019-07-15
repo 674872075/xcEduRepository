@@ -6,6 +6,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -26,9 +27,15 @@ public class Swagger2Configuration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
+                //标题
                 .title("IT在线api文档")
+                //描述
                 .description("IT在线api文档")
-//                .termsOfServiceUrl("/")
+                //（不可见）条款地址
+                .termsOfServiceUrl("https://github.com/674872075/")
+                //作者信息
+                .contact(new Contact("Tourist", "github.com/674872075/", "674872075@qq.com"))
+                //版本号
                 .version("1.0")
                 .build();
     }

@@ -1,8 +1,8 @@
 package com.xuecheng.framework.domain.order.response;
 
-import com.xuecheng.framework.domain.order.XcOrdersPay;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.framework.model.response.ResultCode;
+import com.xuecheng.framework.domain.order.XcOrdersPay;
 import lombok.Data;
 import lombok.ToString;
 

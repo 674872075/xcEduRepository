@@ -13,7 +13,7 @@ import lombok.ToString;
 @Data
 @ToString
 @NoArgsConstructor
-public class CheckChunkResult extends ResponseResult{
+public class CheckChunkResult extends ResponseResult {
 
     public CheckChunkResult(ResultCode resultCode, boolean fileExist) {
         super(resultCode);

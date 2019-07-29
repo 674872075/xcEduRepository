@@ -1,10 +1,11 @@
 package com.xuecheng.api.cms;
 
-import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
+import com.xuecheng.framework.domain.cms.response.CmsPostPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
+import com.xuecheng.framework.domain.cms.CmsPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -53,5 +54,13 @@ public interface CmsPageControllerApi {
     
     @ApiOperation("发布页面")
     public ResponseResult post(String pageId);
+
+
+    @ApiOperation("保存页面")
+    public CmsPageResult save(CmsPage cmsPage);
+
+    @ApiOperation("一键发布页面")
+    public CmsPostPageResult postPageQuick(CmsPage cmsPage);
+
 
 }

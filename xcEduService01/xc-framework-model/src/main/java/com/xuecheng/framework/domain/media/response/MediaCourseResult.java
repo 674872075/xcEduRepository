@@ -1,9 +1,9 @@
 package com.xuecheng.framework.domain.media.response;
 
-import com.xuecheng.framework.domain.media.MediaFile;
 import com.xuecheng.framework.domain.media.MediaVideoCourse;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.framework.model.response.ResultCode;
+import com.xuecheng.framework.domain.media.MediaFile;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;

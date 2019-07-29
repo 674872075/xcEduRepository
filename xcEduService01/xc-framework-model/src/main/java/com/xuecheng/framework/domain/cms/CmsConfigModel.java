@@ -10,11 +10,10 @@ import java.util.Map;
  */
 @Data
 @ToString
-public class CmsConfigModel {
+public class CmsConfigModel extends CmsPage{
     private String key;
     private String name;
     private String url;
     private Map mapValue;
     private String value;
-
 }

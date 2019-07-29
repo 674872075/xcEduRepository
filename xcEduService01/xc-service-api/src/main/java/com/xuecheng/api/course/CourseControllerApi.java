@@ -1,11 +1,11 @@
 package com.xuecheng.api.course;
 
-import com.xuecheng.framework.domain.course.CourseBase;
-import com.xuecheng.framework.domain.course.CourseMarket;
-import com.xuecheng.framework.domain.course.Teachplan;
+import com.xuecheng.framework.domain.course.*;
 import com.xuecheng.framework.domain.course.ext.CourseInfo;
+import com.xuecheng.framework.domain.course.ext.CourseView;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
 import com.xuecheng.framework.domain.course.request.CourseListRequest;
+import com.xuecheng.framework.domain.course.response.CoursePublishResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
@@ -44,17 +44,35 @@ public interface CourseControllerApi {
     ResponseResult saveCourseBase(CourseBase courseBase);
     
     @ApiOperation("获取课程基础信息")
-    /*@ApiImplicitParam(name = "courseId", value = "课程id"
-            , required = true, paramType = "path", dataType = "String")*/
-    public CourseBase getCourseBaseById(String courseId);
+    CourseBase getCourseBaseById(String courseId);
     
     @ApiOperation("更新课程基础信息")
-    public ResponseResult updateCourseBase(CourseBase courseBase);
+    ResponseResult updateCourseBase(CourseBase courseBase);
 
     @ApiOperation("获取课程营销信息")
-    public CourseMarket getCourseMarketById(String courseId);
+    CourseMarket getCourseMarketById(String courseId);
 
     @ApiOperation("更新课程营销信息")
-    public ResponseResult updateCourseMarket(CourseMarket courseMarket);
+    ResponseResult updateCourseMarket(CourseMarket courseMarket);
 
+    @ApiOperation("添加课程图片")
+    ResponseResult addCoursePic(String courseId,String pic);
+
+    @ApiOperation("获取课程图片信息")
+    CoursePic findCoursePic(String courseId);
+
+    @ApiOperation("删除课程图片")
+    ResponseResult deleteCoursePic(String courseId);
+
+    @ApiOperation("课程视图查询")
+    public CourseView courseview(String courseId);
+
+    @ApiOperation("课程预览")
+    CoursePublishResult preview(String id);
+
+    @ApiOperation("发布课程")
+    public CoursePublishResult publish(String id);
+
+    @ApiOperation("保存课程计划与媒资文件关联")
+    public ResponseResult savemedia(TeachplanMedia teachplanMedia);
 }

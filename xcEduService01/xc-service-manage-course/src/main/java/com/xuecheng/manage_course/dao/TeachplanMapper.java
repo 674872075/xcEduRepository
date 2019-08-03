@@ -17,6 +17,6 @@ public interface TeachplanMapper {
      * @param courseId
      * @return
      */
-    public TeachplanNode selectList(String courseId);
+    TeachplanNode selectList(String courseId);
 
 }

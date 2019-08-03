@@ -3,7 +3,7 @@
 <mapper namespace="com.xuecheng.manage_course.dao.CategoryMapper">
 
     <!--手动映射-->
-    <resultMap id="categoryNode" type="com.xuecheng.framework.domain.course.ext.CategoryNode">
+    <resultMap id="categoryNode"  type="com.xuecheng.framework.domain.course.ext.CategoryNode">
         <id column="one_id" property="id"/>
         <result column="one_name" property="name"/>
         <result column="one_label" property="label"/>
